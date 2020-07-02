@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\pavel\source\repos\Class Wars\Class Wars\Source.cpp(12,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\pavel\source\repos\Class Wars\Class Wars\Source.cpp(18,17): warning C4101: 'army2': unreferenced local variable
+  Class Wars.vcxproj -> C:\Users\pavel\source\repos\Class Wars\Debug\Class Wars.exe
