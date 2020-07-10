@@ -15,12 +15,12 @@ public:
 
 	Tank(string tipe, string model, int health,int R, int A, int T) :  CombatVehicle( tipe,  model,  health), R(R), A(A), T(T) 
 	{
-		/*tipe = "Abrams";
-		model = "M1";
-		health = 150;
-		R = 8;
-		A = 8;
-		T = 1500;*/
+		tipe = tipe;
+		model = model;
+		health = health;
+		R = R;
+		A = A;
+		T = T;
 	}
 
 	int Attack()override
@@ -35,6 +35,9 @@ public:
 
 	void ShowInfo()const override
 	{
+		cout << "Tipe: " << this->type << endl;
+		cout << "Model: " << this->model << endl;
+		cout << "Health: " << this->health << endl;
 		cout << "Recharge time: " << R << endl;
 		cout << "Shot accuracy: " << A << endl;
 		cout << "Armor thickness: " << T << endl;

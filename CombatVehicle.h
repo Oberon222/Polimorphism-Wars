@@ -28,7 +28,7 @@ public:
 		cout << "Health: " << health << endl;
 	}
 
-	virtual int Attack(CombatVehicle cv) = 0;
+	virtual int Attack() = 0;
 
 	virtual int Defense(int damage) = 0;
 };

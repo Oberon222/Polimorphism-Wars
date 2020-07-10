@@ -10,13 +10,13 @@ class ArmoredCar : public CombatVehicle
 public:
 	ArmoredCar() : C(0), S(0) { }
 
-	ArmoredCar(string tipe, string model, int health,int C, int S)
+	ArmoredCar(string tipe, string model, int health,int C, int S) : CombatVehicle(tipe, model, health), C(C), S(S)
 	{ 
-		tipe = "BTR";
-		model = "Bucefal";
-		health = 100;
-		C = 4;
-		S = 80;
+		tipe = tipe;
+		model = model;
+		health = health;
+		C = C;
+		S = S;
 	}
 
 	int Attack()override
@@ -34,6 +34,9 @@ public:
 
 	void ShowInfo()const override
 	{
+		cout << "Tipe: " << this->type << endl;
+		cout << "Model: " << this->model << endl;
+		cout << "Health: " << this->health << endl;
 		cout << "Number of weapons: " << C << endl;
 		cout << "Speed: " << S << endl;
 	}

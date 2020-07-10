@@ -11,14 +11,14 @@ class AirDefenseVehicle : public CombatVehicle
 public:
 	AirDefenseVehicle() : L(0), R_shot(0), M(0) { }
 
-	AirDefenseVehicle(string tipe, string model, int health, int L, int R_shot, int M)
+	AirDefenseVehicle(string tipe, string model, int health, int L, int R_shot, int M) : CombatVehicle(tipe, model, health), L(L), R_shot(R_shot), M(M)
 	{
-		tipe = "Shilka";
-		model = "ZSU-23-4";
-		health = 50;
-		L = 1500;
-		R_shot = 11;
-		M = 6;
+		tipe = tipe;
+		model = model;
+		health = health;
+		L = L;
+		R_shot = R_shot;
+		M = M;
 	}
 
 	int Attack()override
@@ -35,8 +35,11 @@ public:
 
 	void ShowInfo()const override
 	{
-		cout << "" << L << endl;
-		cout << " " << R_shot << endl;
-		cout << " " << M << endl;
+		cout << "Tipe: " << this->type << endl;
+		cout << "Model: " << this->model << endl;
+		cout << "Health: " << this->health << endl;
+		cout << "Range: " << L << endl;
+		cout << "Firing speed: " << R_shot << endl;
+		cout << "Mobility: " << M << endl;
 	}
 };
