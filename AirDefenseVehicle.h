@@ -11,14 +11,11 @@ class AirDefenseVehicle : public CombatVehicle
 public:
 	AirDefenseVehicle() : L(0), R_shot(0), M(0) { }
 
-	AirDefenseVehicle(string tipe, string model, int health, int L, int R_shot, int M) : CombatVehicle(tipe, model, health), L(L), R_shot(R_shot), M(M)
+	AirDefenseVehicle(string tipe, string model, int health, int L, int R_shot, int M) : CombatVehicle(tipe, model, health)
 	{
-		tipe = tipe;
-		model = model;
-		health = health;
-		L = L;
-		R_shot = R_shot;
-		M = M;
+		this->L = L;
+		this->R_shot = R_shot;
+		this->M = M;
 	}
 
 	int Attack()override

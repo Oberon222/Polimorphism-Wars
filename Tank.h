@@ -13,14 +13,11 @@ class Tank : public CombatVehicle
 public:
 	Tank() : R(0), A(0), T(0) { }
 
-	Tank(string tipe, string model, int health,int R, int A, int T) :  CombatVehicle( tipe,  model,  health), R(R), A(A), T(T) 
+	Tank(string tipe, string model, int health,int R, int A, int T) :  CombatVehicle( tipe,  model,  health)
 	{
-		tipe = tipe;
-		model = model;
-		health = health;
-		R = R;
-		A = A;
-		T = T;
+		this->R = R;
+		this->A = A;
+		this->T = T;
 	}
 
 	int Attack()override

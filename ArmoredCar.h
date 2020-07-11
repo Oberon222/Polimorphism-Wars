@@ -10,13 +10,11 @@ class ArmoredCar : public CombatVehicle
 public:
 	ArmoredCar() : C(0), S(0) { }
 
-	ArmoredCar(string tipe, string model, int health,int C, int S) : CombatVehicle(tipe, model, health), C(C), S(S)
+	ArmoredCar(string tipe, string model, int health,int C, int S) : CombatVehicle(tipe, model, health)
 	{ 
-		tipe = tipe;
-		model = model;
-		health = health;
-		C = C;
-		S = S;
+		
+		this->C = C;
+		this->S = S;
 	}
 
 	int Attack()override
