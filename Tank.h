@@ -25,9 +25,9 @@ public:
 		return 100 * A / R;
 	}
 
-	int Defense(int damage)override
+	void  Defense(int damage)override
 	{
-		return damage - T;
+		health-= damage - T;
 	}
 
 	void ShowInfo()const override

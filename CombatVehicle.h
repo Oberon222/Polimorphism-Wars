@@ -30,5 +30,5 @@ public:
 
 	virtual int Attack() = 0;
 
-	virtual int Defense(int damage) = 0;
+	virtual void Defense(int damage) = 0;
 };

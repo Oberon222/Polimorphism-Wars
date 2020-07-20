@@ -24,10 +24,10 @@ public:
 
 	}
 
-	int Defense(int damage)override
+	void Defense(int damage)override
 	{
 		health = damage - (S / 2);
-		return health;
+		
 	}
 
 	void ShowInfo()const override
